@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 // Use local port 5000
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || '5000';
 
 // Bypass cors and parse req and res into json format
 app.use(cors());
