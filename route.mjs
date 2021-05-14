@@ -27,8 +27,8 @@ router.route('/:date').get(async (req, res) => {
     return;
 });
 
-router.route('/?:id').delete(async (req, res) => {
-    const id = req.params.id;
+router.route('/').delete(async (req, res) => {
+    const id = req.query.id;
     const deleted = await heartDataset.findByIdAndRemove(id);
     try {
         res.status(200).json(deleted);
